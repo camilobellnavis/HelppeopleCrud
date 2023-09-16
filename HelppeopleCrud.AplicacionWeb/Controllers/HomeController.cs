@@ -106,6 +106,7 @@ namespace HelppeopleCrud.AplicacionWeb.Controllers
             return StatusCode(StatusCodes.Status200OK, new { valor = response });
         }
 
+        [HttpPut]
         public async Task<IActionResult> ActualizarV([FromBody] VacanteDTO vacanteDTO)
         {
             Vacante vacante = new Vacante()
@@ -126,7 +127,7 @@ namespace HelppeopleCrud.AplicacionWeb.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Eliminar(int Id)
+        public async Task<IActionResult> EliminarC(int Id)
         {
             
             bool response = await _ciudadanoService.Eliminar(Id);

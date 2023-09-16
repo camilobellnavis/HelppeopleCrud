@@ -20,20 +20,6 @@ namespace HelppeopleCrud.BLL.Service
             return await _vacanteRepo.Actualizar(modelo);
         }
 
-        public async Task<Vacante> ActualizarEstado(int id, int id_ciudadano)
-        {
-            IQueryable<Vacante> vacanteSQL = await _vacanteRepo.ObtenerTodos();
-
-            Vacante vacante = vacanteSQL.Where(v => v.Id == id).FirstOrDefault();
-
-            vacante.Estado = false;
-
-            vacante.IdCiudadano= id_ciudadano;
-
-            return vacante;
-
-        }
-
         public async Task<bool> Eliminar(int id)
         {
             return await _vacanteRepo.Eliminar(id);

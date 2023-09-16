@@ -14,8 +14,5 @@ namespace HelppeopleCrud.BLL.Service
         Task<bool> Eliminar(int id);
         Task<Vacante> Obtener(int id);
         Task<IQueryable<Vacante>> ObtenerTodos();
-
-
-        Task<Vacante> ActualizarEstado(int id, int id_ciudadano);
     }
 }
